@@ -1,5 +1,7 @@
 package com.company.user.dto;
 
+import com.company.user.enums.UserRole;
+import com.company.user.enums.UserStatus;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -15,12 +17,12 @@ import java.time.LocalDateTime;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class UserResDTO {
     private String id;
-    private String name;
-    private String surname;
-    private String email;
+    private String fullName;
     private String phoneNum;
     private String password;
     private String attachId;
     private String attachPath;
+    private UserRole role;
+    private UserStatus status;
     private LocalDateTime createdDate;
 }
