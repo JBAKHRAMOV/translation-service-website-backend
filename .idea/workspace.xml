@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac1b02e7-484a-4376-a9b0-5d39816e9d91" name="Changes" comment="added dependency for testing and changed fields of UserEntity">
+    <list default="true" id="ac1b02e7-484a-4376-a9b0-5d39816e9d91" name="Changes" comment="rewrite UserStatus">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/user/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/user/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/user/dto/UserDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/user/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/user/entity/UserEntity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +23,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2SfOwdTRksdiyciSjfQWA25uezi" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -79,7 +85,7 @@
       <option name="presentableId" value="Default" />
       <updated>1689534411931</updated>
       <workItem from="1689534412966" duration="1647000" />
-      <workItem from="1689599171997" duration="2415000" />
+      <workItem from="1689599171997" duration="3131000" />
     </task>
     <task id="LOCAL-00001" summary="added some need thing">
       <created>1689600093173</created>
@@ -102,7 +108,21 @@
       <option name="project" value="LOCAL" />
       <updated>1689601533307</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="changed ROLE_USER to ROLE_PUBLISHER">
+      <created>1689601888651</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1689601888651</updated>
+    </task>
+    <task id="LOCAL-00005" summary="rewrite UserStatus">
+      <created>1689602067066</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1689602067066</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,6 +131,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added some need thing" />
     <MESSAGE value="added dependency for testing and changed fields of UserEntity" />
-    <option name="LAST_COMMIT_MESSAGE" value="added dependency for testing and changed fields of UserEntity" />
+    <MESSAGE value="changed ROLE_USER to ROLE_PUBLISHER" />
+    <MESSAGE value="rewrite UserStatus" />
+    <option name="LAST_COMMIT_MESSAGE" value="rewrite UserStatus" />
   </component>
 </project>

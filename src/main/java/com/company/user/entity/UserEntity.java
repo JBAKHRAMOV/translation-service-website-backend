@@ -19,27 +19,34 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @Table
 public class UserEntity  extends EntityBase {
+
     @Size(message = "Full name size is not valid. Full name must be longer than 7 letters " , min = 7)
     @NotBlank(message = "full name is blank")
     @NotEmpty(message = "full name is empty")
     @NotNull(message = "full name is null")
     @Column(unique = true)
     private String fullName;
+
     @Size(message = "Phone size is not valid. Phone must be longer than 7 letters and less than 13 letters " , min = 9, max = 13)
     @NotBlank(message = "phone is blank")
     @NotEmpty(message = "phone is empty")
     @NotNull(message = "phone is null")
     @Column(unique = true)
     private String phoneNum;
+
     @Size(message = "Password size is not valid. Password must be longer than 5 letters" , min = 5)
     @NotBlank(message = "password is blank")
     @NotEmpty(message = "password is empty")
     @NotNull(message = "password is null")
     private String password;
+
     private String attachId;
+
     private String attachPath;
+
     @Enumerated(EnumType.STRING)
     private UserStatus status;
+
     @Enumerated(EnumType.STRING)
     private UserRole userRole;
 }

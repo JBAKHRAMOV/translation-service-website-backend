@@ -16,7 +16,7 @@ import org.springframework.web.multipart.MultipartFile;
 @AllArgsConstructor
 @RequestMapping("/api/v1/user")
 public class UserController {
-    @Qualifier("user-service")
+    @Qualifier(value = "user-service")
     private final UserService userService;
 
     /**
