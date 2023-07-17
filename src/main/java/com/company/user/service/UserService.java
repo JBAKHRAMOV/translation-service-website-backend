@@ -13,28 +13,25 @@ public interface UserService {
     /**
      * ADMIN
      */
-    ResDTO addUser(UserDto dto); // admin
-    List<UserResDTO> getAll();// admin
-    ResDTO block(String userId);// admin
-    ResDTO unblock(String userId);// admin
-    List<UserResDTO> getAllByStatus(String status);// admin
+    ResDTO addUser(UserDto dto);
+    List<UserResDTO> getAll();
+    ResDTO block(String userId);
+    ResDTO unblock(String userId);
+    List<UserResDTO> getAllByStatus(String status);
 
     /**
-     * ADMIN and USER
+     * ADMIN and PUBLISHER
      */
 
-    UserResDTO getById(String id);// user and admin
-    ResDTO delete(String userId);// user and admin
-
+    UserResDTO getById(String id);
+    ResDTO delete(String userId);
+    ResDTO update(UserUpdDTO dto);
 
     /**
-     * USER
+     * PUBLISHER
      */
-
-    ResDTO update(UserUpdDTO dto);// user
-    ResDTO attachUpload( MultipartFile file);// user
-    ResDTO attachDelete(String attachId);// user
-    UserResDTO confirmUser(String userId);// user
+    ResDTO attachUpload( MultipartFile file);
+    ResDTO attachDelete(String attachId);
 
 
 
