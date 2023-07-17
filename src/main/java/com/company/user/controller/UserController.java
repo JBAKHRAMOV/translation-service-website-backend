@@ -66,34 +66,42 @@ public class UserController {
         return ResponseEntity.ok(userService.block(id));
     }
 
+    @PutMapping("/{id}")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    public ResponseEntity<?> updateByIdForAdmin(@RequestBody UserUpdDTO userUpdDTO, @PathVariable String id){
+        return ResponseEntity.ok(userService.update(id, userUpdDTO));
+    }
+
 
     /**
-     * USER
+     * PUBLISHER
      */
     @GetMapping("/")
-    @PreAuthorize("hasRole('ROLE_USER')")// t
+    @PreAuthorize("hasRole('ROLE_PUBLISHER')")
     public ResponseEntity<?> getByIdForUser(){
         return ResponseEntity.ok(userService.getById(EntityDetails.getProfile().getId()));
     }
 
     @PutMapping("")
-    @PreAuthorize("hasRole('ROLE_USER')")// t
-    public ResponseEntity<?> updateById(@RequestBody UserUpdDTO userUpdDTO){
-        return ResponseEntity.ok(userService.update(userUpdDTO));
+    @PreAuthorize("hasRole('ROLE_PUBLISHER')")
+    public ResponseEntity<?> updateByIdForPublisher(@RequestBody UserUpdDTO userUpdDTO){
+        return ResponseEntity.ok(userService.update(EntityDetails.getProfile().getId(), userUpdDTO));
     }
 
     @DeleteMapping("/")
-    @PreAuthorize("hasRole('ROLE_USER')")// t
+    @PreAuthorize("hasRole('ROLE_PUBLISHER')")
     public ResponseEntity<?> deleteById(){
         return ResponseEntity.ok(userService.delete(EntityDetails.getProfile().getId()));
     }
 
-    @PostMapping("/attach-upload")// t
+    @PostMapping("/attach-upload")
+    @PreAuthorize("hasRole('ROLE_PUBLISHER')")
     public ResponseEntity<ResDTO> attachUpload(@RequestParam("file") MultipartFile file) {
         return ResponseEntity.ok(userService.attachUpload(file));
     }
 
-    @DeleteMapping("/attach-delete/{id}")// t
+    @DeleteMapping("/attach-delete/{id}")
+    @PreAuthorize("hasRole('ROLE_PUBLISHER')")
     public ResponseEntity<ResDTO> attachDelete(@PathVariable("id") String id) {
         return ResponseEntity.ok(userService.attachDelete(id));
     }

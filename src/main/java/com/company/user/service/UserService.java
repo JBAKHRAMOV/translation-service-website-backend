@@ -25,7 +25,7 @@ public interface UserService {
 
     UserResDTO getById(String id);
     ResDTO delete(String userId);
-    ResDTO update(UserUpdDTO dto);
+    ResDTO update( String id, UserUpdDTO dto);
 
     /**
      * PUBLISHER

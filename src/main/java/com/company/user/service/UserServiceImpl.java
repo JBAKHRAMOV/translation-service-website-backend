@@ -27,72 +27,72 @@ import java.util.Optional;
 public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
-    private  final AttachService attachService;
+    private final AttachService attachService;
 
 
     /**
      * ADMIN
      */
 
-    public ResDTO addUser(UserDto dto){// admin
+    public ResDTO addUser(UserDto dto) {
         UserComponent.checkPhoneNum(dto.getPhoneNum());
-        Optional<UserEntity> optional= userRepository.findByPhoneNumAndIsConfirm(dto.getPhoneNum(), true);
-        if(optional.isPresent()) throw new ItemAlreadyExistsException("User already exists with phoneNum");
+        Optional<UserEntity> optional = userRepository.findByPhoneNum(dto.getPhoneNum());
+        if (optional.isPresent()) {
+            throw new ItemAlreadyExistsException("User already exists with this phone number");
+        }
 
         userRepository.save(
                 new UserEntity(
-                        dto.getName(),
-                        dto.getSurname(),
-                        dto.getEmail(),
+                        dto.getFullName(),
                         dto.getPhoneNum(),
                         dto.getPassword(),
                         "",
                         "",
                         UserStatus.ACTIVE,
-                        UserRole.ROLE_ADMIN,
-                        true,
-                        false,
-                        LocalDate.now()
+                        UserRole.ROLE_PUBLISHER
                 )
         );
-
         return new ResDTO();
     }
+
     public List<UserResDTO> getAll() {
         return userRepository.findAll().stream()
                 .map(this::entityToDto)
                 .toList();
     }
+
     public List<UserResDTO> getAllByStatus(String status) {
         return userRepository.findAllByStatus(UserStatus.valueOf(status)).stream()
                 .map(this::entityToDto)
                 .toList();
     }
-    public ResDTO block(String userId){
-        var user=getUser(userId);
-        user.setIsBlock(true);
+
+    public ResDTO block(String userId) {
+        var user = getUser(userId);
+        user.setStatus(UserStatus.BLOCK);
         userRepository.save(user);
         return new ResDTO();
     }
-    public ResDTO unblock(String userId){
-        var user=getUser(userId);
-        user.setIsBlock(false);
+
+    public ResDTO unblock(String userId) {
+        var user = getUser(userId);
+        user.setStatus(UserStatus.ACTIVE);
         userRepository.save(user);
         return new ResDTO();
     }
 
 
     /**
-     * ADMIN and USER
+     * ADMIN and PUBLISHER
      */
 
     public UserResDTO getById(String id) {
         return entityToDto(getUser(id));
     }
 
-    public ResDTO delete(String userId){// user va admin
-        var user=getUser(userId);
-        user.setStatus(UserStatus.NOT_ACTIVE);
+    public ResDTO delete(String userId) {
+        var user = getUser(userId);
+        user.setStatus(UserStatus.DELETED);
         userRepository.save(user);
         return new ResDTO();
     }
@@ -101,45 +101,45 @@ public class UserServiceImpl implements UserService {
     /**
      * USER
      */
-    public ResDTO update(UserUpdDTO dto){// user
+    public ResDTO update( String id, UserUpdDTO dto) {
 
-        UserEntity entity=getUser(EntityDetails.getProfile().getId());
+        UserEntity entity = getUser(id);
 
         UserComponent.checkPhoneNum(dto.getPhoneNum());
 
         if (!entity.getPhoneNum().equals(dto.getPhoneNum()))
-            if(userRepository.findByPhoneNumAndIsConfirm(dto.getPhoneNum(), true).isPresent())
+            if (userRepository.findByPhoneNum(dto.getPhoneNum()).isPresent())
                 throw new ItemAlreadyExistsException("User already exists with this phone number ");
 
 
-        entity.setName(dto.getName());
-        entity.setSurname(dto.getSurname());
-        entity.setEmail(dto.getEmail());
+        entity.setFullName(dto.getFullName());
         entity.setPassword(passwordEncoder.encode(dto.getPassword()));
         entity.setPhoneNum(dto.getPhoneNum());
+        entity.setRole(dto.getRole());
         userRepository.save(entity);
 
         return new ResDTO();
     }
 
-    public ResDTO attachUpload( MultipartFile file){// user
-        var user=getUser(EntityDetails.getProfile().getId());
-        var res=attachService.upload(file);
-        if (!user.getAttachId().isEmpty()){
+    public ResDTO attachUpload(MultipartFile file) {
+        var user = getUser(EntityDetails.getProfile().getId());
+        var res = attachService.upload(file);
+        if (!user.getAttachId().isEmpty()) {
             attachService.delete(user.getAttachId());
         }
         user.setAttachId(res.getId());
         user.setAttachPath(res.getPath());
 
         userRepository.save(user);
-        return  new ResDTO();
+        return new ResDTO();
     }
-    public ResDTO attachDelete(String attachId){
-        var user=getUser(EntityDetails.getProfile().getId());
+
+    public ResDTO attachDelete(String attachId) {
+        var user = getUser(EntityDetails.getProfile().getId());
         if (user.getAttachId().isEmpty()) return new ResDTO(false, "User's attach not found!!!");
         if (!user.getAttachId().equals(attachId)) return new ResDTO(false, "User doesn't have attach which this id");
 
-        if(attachService.delete(attachId)){
+        if (attachService.delete(attachId)) {
             user.setAttachId("");
             user.setAttachPath("");
 
@@ -148,15 +148,6 @@ public class UserServiceImpl implements UserService {
         }
 
         return new ResDTO(false, "Fail , try again ");
-    }
-    public UserResDTO confirmUser(String userId){
-        UserEntity entity=userRepository.findById(userId)
-                .orElseThrow(()-> new ItemNotFoundException("User not found"));
-
-        entity.setIsConfirm(true);
-        entity.setStatus(UserStatus.ACTIVE);
-        userRepository.save(entity);
-        return entityToDto(entity);
     }
 
 
@@ -167,13 +158,13 @@ public class UserServiceImpl implements UserService {
     private UserResDTO entityToDto(UserEntity entity) {
         return new UserResDTO(
                 entity.getId(),
-                entity.getName(),
-                entity.getSurname(),
-                entity.getEmail(),
+                entity.getFullName(),
                 entity.getPhoneNum(),
                 entity.getPassword(),
                 entity.getAttachId(),
                 entity.getAttachPath(),
+                entity.getRole(),
+                entity.getStatus(),
                 entity.getCreatedDate()
         );
     }
