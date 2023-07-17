@@ -25,13 +25,13 @@ public class UserEntity  extends EntityBase {
     @NotNull(message = "full name is null")
     @Column(unique = true)
     private String fullName;
-    @Size(message = "phone size is not valid. phone must be longer than 7 letters and less than 13 letters " , min = 9, max = 13)
+    @Size(message = "Phone size is not valid. Phone must be longer than 7 letters and less than 13 letters " , min = 9, max = 13)
     @NotBlank(message = "phone is blank")
     @NotEmpty(message = "phone is empty")
     @NotNull(message = "phone is null")
     @Column(unique = true)
     private String phoneNum;
-    @Size(message = "password size is not valid. Password must be longer than 5 letters" , min = 5)
+    @Size(message = "Password size is not valid. Password must be longer than 5 letters" , min = 5)
     @NotBlank(message = "password is blank")
     @NotEmpty(message = "password is empty")
     @NotNull(message = "password is null")

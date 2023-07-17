@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac1b02e7-484a-4376-a9b0-5d39816e9d91" name="Changes" comment="added some need thing">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="ac1b02e7-484a-4376-a9b0-5d39816e9d91" name="Changes" comment="added dependency for testing and changed fields of UserEntity">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/user/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/user/entity/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/company/TranslationServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/company/TranslationServiceApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +14,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -47,7 +47,7 @@
       <recent name="D:\itelejproject\translation-service\src\main\java\com\company" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Diffblue Cover.Write tests for class TempUserDTO">
     <configuration name="TranslationServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="translation-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.company.TranslationServiceApplication" />
@@ -55,6 +55,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Write tests for class TempUserDTO" type="com.diffblue.cover.write-tests-run-configuration" factoryName="com.diffblue.cover.write-tests-run-configuration" activateToolWindowBeforeRun="false" temporary="true">
+      <module name="translation-service" />
+      <settings run-config-name="Write tests for class TempUserDTO" include-system-env-vars="true">
+        <jvm-args />
+        <selection-scope>class</selection-scope>
+        <selected-element key="com.company.user.dto.TempUserDTO" />
+      </settings>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Diffblue Cover.Write tests for class TempUserDTO" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -65,7 +79,7 @@
       <option name="presentableId" value="Default" />
       <updated>1689534411931</updated>
       <workItem from="1689534412966" duration="1647000" />
-      <workItem from="1689599171997" duration="2099000" />
+      <workItem from="1689599171997" duration="2415000" />
     </task>
     <task id="LOCAL-00001" summary="added some need thing">
       <created>1689600093173</created>
@@ -81,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689600312919</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added dependency for testing and changed fields of UserEntity">
+      <created>1689601533307</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1689601533307</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -89,6 +110,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added some need thing" />
-    <option name="LAST_COMMIT_MESSAGE" value="added some need thing" />
+    <MESSAGE value="added dependency for testing and changed fields of UserEntity" />
+    <option name="LAST_COMMIT_MESSAGE" value="added dependency for testing and changed fields of UserEntity" />
   </component>
 </project>
