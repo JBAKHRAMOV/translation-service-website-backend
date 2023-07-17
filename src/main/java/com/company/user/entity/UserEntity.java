@@ -3,10 +3,8 @@ package com.company.user.entity;
 import com.company.base.EntityBase;
 import com.company.user.enums.UserRole;
 import com.company.user.enums.UserStatus;
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,12 +17,24 @@ import java.time.LocalDate;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "user_entity")
+@Table
 public class UserEntity  extends EntityBase {
-    private String name;
-    private String surname;
-    private String email;
+    @Size(message = "Full name size is not valid. Full name must be longer than 7 letters " , min = 7)
+    @NotBlank(message = "full name is blank")
+    @NotEmpty(message = "full name is empty")
+    @NotNull(message = "full name is null")
+    @Column(unique = true)
+    private String fullName;
+    @Size(message = "phone size is not valid. phone must be longer than 7 letters and less than 13 letters " , min = 9, max = 13)
+    @NotBlank(message = "phone is blank")
+    @NotEmpty(message = "phone is empty")
+    @NotNull(message = "phone is null")
+    @Column(unique = true)
     private String phoneNum;
+    @Size(message = "password size is not valid. Password must be longer than 5 letters" , min = 5)
+    @NotBlank(message = "password is blank")
+    @NotEmpty(message = "password is empty")
+    @NotNull(message = "password is null")
     private String password;
     private String attachId;
     private String attachPath;
@@ -32,10 +42,4 @@ public class UserEntity  extends EntityBase {
     private UserStatus status;
     @Enumerated(EnumType.STRING)
     private UserRole userRole;
-    private Boolean isConfirm;
-    private Boolean isBlock;
-    private LocalDate paymentDate;
-
-
-
 }
