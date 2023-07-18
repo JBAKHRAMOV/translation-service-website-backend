@@ -17,7 +17,7 @@ public class CustomProfileDetailsService implements UserDetailsService {
     @Override
     public CustomProfileDetails loadUserByUsername(String id) throws UsernameNotFoundException {
         UserEntity entity = userRepository
-                .findByIdAndIsConfirm(id, true)
+                .findById(id)
                 .orElseThrow(() -> new ItemNotFoundException("Profile Not Found"));
 
         return new CustomProfileDetails(entity);
@@ -25,7 +25,7 @@ public class CustomProfileDetailsService implements UserDetailsService {
 
     public CustomProfileDetails loadUserByPhone(String id) throws UsernameNotFoundException {
         UserEntity entity = userRepository
-                .findByIdAndIsConfirm(id, true)
+                .findById(id)
                 .orElseThrow(() -> new ItemNotFoundException("Profile Not Found"));
 
         return new CustomProfileDetails(entity);
