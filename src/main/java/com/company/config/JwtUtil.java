@@ -7,8 +7,8 @@ import java.util.Date;
 
 public class JwtUtil {
 
-    private final static String secretKey = "jbakhramovjbakhramovjbakhramovjbakhramovjbakhramovjbakhramovjbakhramovjbakhramovjbakhramov" +
-            "jbakhramovjbakhramovjbakhramovjbakhramovjbakhramovjbakhramovjbakhramovjbakhramovjbakhramovjbakhramovjbakhramovjbakhramov";
+    private final static String secretKey = "secretkeysecretkeysecretkeysecretkeysecretkeysecretkeysecretkey" +
+            "secretkeysecretkeysecretkey";
 
     public static String encode(String email) {
         JwtBuilder jwtBuilder = Jwts.builder();
