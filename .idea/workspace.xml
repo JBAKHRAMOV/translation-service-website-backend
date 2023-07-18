@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac1b02e7-484a-4376-a9b0-5d39816e9d91" name="Changes" comment="changed some fields in CustomProfileDetails" />
+    <list default="true" id="ac1b02e7-484a-4376-a9b0-5d39816e9d91" name="Changes" comment="changed secretKey fields in JwtUtil">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/auth/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/auth/controller/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/auth/dto/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/auth/dto/RegisterRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/auth/service/AuthenticationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/auth/service/AuthenticationServiceImpl.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -85,7 +90,7 @@
       <updated>1689534411931</updated>
       <workItem from="1689534412966" duration="1647000" />
       <workItem from="1689599171997" duration="5785000" />
-      <workItem from="1689671994716" duration="354000" />
+      <workItem from="1689671994716" duration="1849000" />
     </task>
     <task id="LOCAL-00001" summary="added some need thing">
       <created>1689600093173</created>
@@ -171,7 +176,21 @@
       <option name="project" value="LOCAL" />
       <updated>1689672341278</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="changed some methods in CustomProfileDetailsService">
+      <created>1689672502310</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1689672502310</updated>
+    </task>
+    <task id="LOCAL-00014" summary="changed secretKey fields in JwtUtil">
+      <created>1689672701749</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1689672701749</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,6 +208,8 @@
     <MESSAGE value="changed some method of UserService" />
     <MESSAGE value="changed some method of package user" />
     <MESSAGE value="changed some fields in CustomProfileDetails" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed some fields in CustomProfileDetails" />
+    <MESSAGE value="changed some methods in CustomProfileDetailsService" />
+    <MESSAGE value="changed secretKey fields in JwtUtil" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed secretKey fields in JwtUtil" />
   </component>
 </project>
