@@ -39,7 +39,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
 
 
         UserEntity user = new UserEntity(
-                request.getFulName(),
+                request.getFullName(),
                 request.getPhone(),
                 passwordEncoder.encode(request.getPassword()),
                 "",
@@ -58,15 +58,17 @@ public class AuthenticationServiceImpl implements AuthenticationService {
 
         UserComponent.checkPhoneNum(request.getPhone());
 
-        var user = repository.findByPhoneNumAndPassword(request.getPhone(), request.getPassword())
-                .orElseThrow(() -> new ItemNotFoundException("Phone or password is not correct"));
+        var user = repository.findByPhoneNum(request.getPhone())
+                .orElseThrow(() -> new ItemNotFoundException("Phone is not correct"));
 
+        if (!passwordEncoder.matches(request.getPassword(), user.getPassword())) {
+            throw new ItemNotFoundException("Password is not correct");
+        }
 
         if (user.getStatus().equals(UserStatus.BLOCK)
                 || user.getStatus().equals(UserStatus.DELETED)) {
             throw new UserBlockException("You blocked by admin");
         }
-
 
         var jwtToken = JwtUtil.encode(user.getId());
 

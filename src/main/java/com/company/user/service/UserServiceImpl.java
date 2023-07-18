@@ -170,7 +170,7 @@ public class UserServiceImpl implements UserService {
     }
 
     private UserEntity getUser(String id) {
-        return userRepository.findByIdAndIsConfirm(id, true)
+        return userRepository.findById(id)
                 .orElseThrow(() -> new ItemNotFoundException("User not found!!!"));
     }
 }
