@@ -17,7 +17,7 @@ public class CustomProfileDetails implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return Collections.singletonList(new SimpleGrantedAuthority(entity.getUserRole().name()));
+        return Collections.singletonList(new SimpleGrantedAuthority(entity.getRole().name()));
     }
 
     @Override
@@ -27,7 +27,7 @@ public class CustomProfileDetails implements UserDetails {
 
     @Override
     public String getUsername() {
-        return entity.getEmail();
+        return entity.getPhoneNum();
     }
 
     @Override

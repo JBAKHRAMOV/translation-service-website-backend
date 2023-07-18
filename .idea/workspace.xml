@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac1b02e7-484a-4376-a9b0-5d39816e9d91" name="Changes" comment="changed some method of UserService">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/user/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/user/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/user/entity/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/user/enums/UserStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/user/enums/UserStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/user/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/user/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/user/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/user/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/user/service/UserServiceImpl.java" afterDir="false" />
-    </list>
+    <list default="true" id="ac1b02e7-484a-4376-a9b0-5d39816e9d91" name="Changes" comment="changed some method of package user" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,6 +30,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
@@ -88,7 +84,7 @@
       <option name="presentableId" value="Default" />
       <updated>1689534411931</updated>
       <workItem from="1689534412966" duration="1647000" />
-      <workItem from="1689599171997" duration="5701000" />
+      <workItem from="1689599171997" duration="5785000" />
     </task>
     <task id="LOCAL-00001" summary="added some need thing">
       <created>1689600093173</created>
@@ -160,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689603284453</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="changed some method of package user">
+      <created>1689604929339</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1689604929339</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,6 +179,7 @@
     <MESSAGE value="rewrite UserResDTO.java" />
     <MESSAGE value="added field role to UserUpdDTO" />
     <MESSAGE value="changed some method of UserService" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed some method of UserService" />
+    <MESSAGE value="changed some method of package user" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed some method of package user" />
   </component>
 </project>
