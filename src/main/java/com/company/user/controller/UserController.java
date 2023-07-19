@@ -83,7 +83,7 @@ public class UserController {
     }
 
     @PutMapping("")
-    @PreAuthorize("hasRole('ROLE_PUBLISHER')")
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_PUBLISHER')")
     public ResponseEntity<?> updateByIdForPublisher(@RequestBody UserUpdDTO userUpdDTO){
         return ResponseEntity.ok(userService.update(EntityDetails.getProfile().getId(), userUpdDTO));
     }
