@@ -2,11 +2,10 @@ package com.company.auth.controller;
 
 import com.company.auth.dto.*;
 import com.company.auth.service.AuthenticationService;
-import com.company.base.ResDTO;
+import com.company.component.ResDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

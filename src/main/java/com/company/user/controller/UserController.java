@@ -1,6 +1,6 @@
 package com.company.user.controller;
 
-import com.company.base.ResDTO;
+import com.company.component.ResDTO;
 import com.company.config.details.EntityDetails;
 import com.company.user.dto.UserDto;
 import com.company.user.dto.UserUpdDTO;

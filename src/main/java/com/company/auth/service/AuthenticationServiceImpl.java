@@ -1,7 +1,7 @@
 package com.company.auth.service;
 
 import com.company.auth.dto.*;
-import com.company.base.ResDTO;
+import com.company.component.ResDTO;
 import com.company.component.UserComponent;
 import com.company.config.JwtUtil;
 import com.company.exp.*;
@@ -10,16 +10,13 @@ import com.company.user.enums.UserRole;
 import com.company.user.enums.UserStatus;
 import com.company.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
 import java.util.Optional;
 
 import static com.company.user.enums.UserStatus.ACTIVE;
-import static org.hibernate.resource.transaction.spi.TransactionStatus.NOT_ACTIVE;
 
 @Service("authentication-service")
 @RequiredArgsConstructor
