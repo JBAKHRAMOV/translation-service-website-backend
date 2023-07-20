@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac1b02e7-484a-4376-a9b0-5d39816e9d91" name="Changes" comment="fixed all error and check all api of auth">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/language/LanguageEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/config/SecurityConfiguration.java" afterDir="false" />
+    <list default="true" id="ac1b02e7-484a-4376-a9b0-5d39816e9d91" name="Changes" comment="changed package of ResDTO">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/language/entity/LanguageEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/language/entity/LanguageEntity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +16,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="com.haulmont.jpb.JpaEntity" />
       </list>
     </option>
   </component>
@@ -108,7 +106,7 @@
       <workItem from="1689781530677" duration="60000" />
       <workItem from="1689781836421" duration="82000" />
       <workItem from="1689795411739" duration="3574000" />
-      <workItem from="1689830835481" duration="726000" />
+      <workItem from="1689830835481" duration="1084000" />
     </task>
     <task id="LOCAL-00001" summary="added some need thing">
       <created>1689600093173</created>
@@ -229,7 +227,21 @@
       <option name="project" value="LOCAL" />
       <updated>1689781569278</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="added LanguageEntity">
+      <created>1689831588958</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1689831588958</updated>
+    </task>
+    <task id="LOCAL-00019" summary="changed package of ResDTO">
+      <created>1689831749062</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1689831749062</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,6 +263,8 @@
     <MESSAGE value="changed secretKey fields in JwtUtil" />
     <MESSAGE value="fixed all methods and fields in auth package" />
     <MESSAGE value="fixed all error and check all api of auth" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed all error and check all api of auth" />
+    <MESSAGE value="added LanguageEntity" />
+    <MESSAGE value="changed package of ResDTO" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed package of ResDTO" />
   </component>
 </project>
