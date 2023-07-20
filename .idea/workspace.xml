@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac1b02e7-484a-4376-a9b0-5d39816e9d91" name="Changes" comment="changed package of ResDTO">
+    <list default="true" id="ac1b02e7-484a-4376-a9b0-5d39816e9d91" name="Changes" comment="added LanguageRepository">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/language/dto/LanguageReqDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/language/dto/LanguageResDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/language/service/LanguageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/language/entity/LanguageEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/language/entity/LanguageEntity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -15,8 +20,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="com.haulmont.jpb.JpaEntity" />
+        <option value="com.haulmont.jpb.JpaRepository" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -106,7 +113,7 @@
       <workItem from="1689781530677" duration="60000" />
       <workItem from="1689781836421" duration="82000" />
       <workItem from="1689795411739" duration="3574000" />
-      <workItem from="1689830835481" duration="1084000" />
+      <workItem from="1689830835481" duration="2131000" />
     </task>
     <task id="LOCAL-00001" summary="added some need thing">
       <created>1689600093173</created>
@@ -241,7 +248,28 @@
       <option name="project" value="LOCAL" />
       <updated>1689831749062</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="added ViewStatus">
+      <created>1689832043103</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1689832043103</updated>
+    </task>
+    <task id="LOCAL-00021" summary="write enum fields to ViewStatus">
+      <created>1689832116715</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1689832116715</updated>
+    </task>
+    <task id="LOCAL-00022" summary="added LanguageRepository">
+      <created>1689832215981</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1689832215981</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,6 +293,9 @@
     <MESSAGE value="fixed all error and check all api of auth" />
     <MESSAGE value="added LanguageEntity" />
     <MESSAGE value="changed package of ResDTO" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed package of ResDTO" />
+    <MESSAGE value="added ViewStatus" />
+    <MESSAGE value="write enum fields to ViewStatus" />
+    <MESSAGE value="added LanguageRepository" />
+    <option name="LAST_COMMIT_MESSAGE" value="added LanguageRepository" />
   </component>
 </project>
