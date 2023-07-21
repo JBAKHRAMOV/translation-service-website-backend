@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac1b02e7-484a-4376-a9b0-5d39816e9d91" name="Changes" comment="finished language part">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/partner/entity/PartnerEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/partner/PartnerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/partner/controller/PartnerController.java" afterDir="false" />
+    <list default="true" id="ac1b02e7-484a-4376-a9b0-5d39816e9d91" name="Changes" comment="added PartnerReqDto and write all fields">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/partner/dto/PartnerUpdDto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +17,8 @@
       <list>
         <option value="com.haulmont.jpb.JpaRepository" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="com.haulmont.jpb.JpaEntity" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -113,7 +112,7 @@
       <workItem from="1689781836421" duration="82000" />
       <workItem from="1689795411739" duration="3574000" />
       <workItem from="1689830835481" duration="8629000" />
-      <workItem from="1689925918503" duration="862000" />
+      <workItem from="1689925918503" duration="1235000" />
     </task>
     <task id="LOCAL-00001" summary="added some need thing">
       <created>1689600093173</created>
@@ -283,7 +282,28 @@
       <option name="project" value="LOCAL" />
       <updated>1689926669041</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="added PartnerEntity and write all fields">
+      <created>1689926876682</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1689926876682</updated>
+    </task>
+    <task id="LOCAL-00026" summary="added PartnerResDto and write all fields">
+      <created>1689927008249</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1689927008249</updated>
+    </task>
+    <task id="LOCAL-00027" summary="added PartnerReqDto and write all fields">
+      <created>1689927095198</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1689927095198</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,6 +332,9 @@
     <MESSAGE value="added LanguageRepository" />
     <MESSAGE value="added LanguageReqDto, LanguageResDto, LanguageService, ChangeStatusDto" />
     <MESSAGE value="finished language part" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished language part" />
+    <MESSAGE value="added PartnerEntity and write all fields" />
+    <MESSAGE value="added PartnerResDto and write all fields" />
+    <MESSAGE value="added PartnerReqDto and write all fields" />
+    <option name="LAST_COMMIT_MESSAGE" value="added PartnerReqDto and write all fields" />
   </component>
 </project>
