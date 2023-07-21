@@ -1,26 +1,22 @@
-package com.company.partner.entity;
+package com.company.partner.dto;
 
-import com.company.base.EntityBase;
 import com.company.component.ViewStatus;
-import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
-import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
-@Entity
 @AllArgsConstructor
-@NoArgsConstructor
-@Table(name = "partner_entity")
-public class PartnerEntity extends EntityBase {
+public class PartnerResDto {
+    private String id;
     private String icon;
     private String name;
     private String link;
-    @Enumerated(EnumType.STRING)
     private ViewStatus status;
+    private LocalDateTime createdDate;
 }
