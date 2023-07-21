@@ -33,13 +33,13 @@ public class SecurityConfiguration {
             "/configuration/security",
             "/swagger-ui.html",
             "/swagger-ui/index.html",
+            "/api/v1/language/w-sec/**",
             "/webjars/**",
             "/v3/api-docs/**",
             "/swagger-ui/**",
             "/swagger-resources",
             "/swagger-resources/**",
-            "/api/v1/auth/**",
-            "/api/v1/sms/**"
+            "/api/v1/auth/**"
     };
 
     @Bean

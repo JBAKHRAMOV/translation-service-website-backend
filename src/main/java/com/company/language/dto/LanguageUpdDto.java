@@ -1,14 +1,12 @@
 package com.company.language.dto;
 
-import com.company.component.ViewStatus;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class LanguageReqDto {
+public class LanguageUpdDto {
     private String nameUz;
     private String nameRu;
     private String nameEng;
-    private String status;
 }
