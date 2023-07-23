@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac1b02e7-484a-4376-a9b0-5d39816e9d91" name="Changes" comment="added PartnerReqDto and write all fields">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/partner/dto/PartnerUpdDto.java" afterDir="false" />
+    <list default="true" id="ac1b02e7-484a-4376-a9b0-5d39816e9d91" name="Changes" comment="added PartnerRepository">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/partner/service/PartnerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,9 +16,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="com.haulmont.jpb.JpaRepository" />
         <option value="Interface" />
         <option value="com.haulmont.jpb.JpaEntity" />
+        <option value="com.haulmont.jpb.JpaRepository" />
         <option value="Class" />
       </list>
     </option>
@@ -112,7 +113,9 @@
       <workItem from="1689781836421" duration="82000" />
       <workItem from="1689795411739" duration="3574000" />
       <workItem from="1689830835481" duration="8629000" />
-      <workItem from="1689925918503" duration="1235000" />
+      <workItem from="1689925918503" duration="1911000" />
+      <workItem from="1689958189238" duration="598000" />
+      <workItem from="1690027123286" duration="3759000" />
     </task>
     <task id="LOCAL-00001" summary="added some need thing">
       <created>1689600093173</created>
@@ -303,15 +306,27 @@
       <option name="project" value="LOCAL" />
       <updated>1689927095198</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="added PartnerUpdDto and write all fields">
+      <created>1689927170263</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1689927170263</updated>
+    </task>
+    <task id="LOCAL-00029" summary="added PartnerRepository">
+      <created>1689927223409</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1689927223409</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added some need thing" />
-    <MESSAGE value="added dependency for testing and changed fields of UserEntity" />
     <MESSAGE value="changed ROLE_USER to ROLE_PUBLISHER" />
     <MESSAGE value="rewrite UserStatus" />
     <MESSAGE value="rewrite UserDto" />
@@ -335,6 +350,8 @@
     <MESSAGE value="added PartnerEntity and write all fields" />
     <MESSAGE value="added PartnerResDto and write all fields" />
     <MESSAGE value="added PartnerReqDto and write all fields" />
-    <option name="LAST_COMMIT_MESSAGE" value="added PartnerReqDto and write all fields" />
+    <MESSAGE value="added PartnerUpdDto and write all fields" />
+    <MESSAGE value="added PartnerRepository" />
+    <option name="LAST_COMMIT_MESSAGE" value="added PartnerRepository" />
   </component>
 </project>
