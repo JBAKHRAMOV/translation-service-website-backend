@@ -11,5 +11,5 @@ public class PartnerReqDto {
     private String icon;
     private String name;
     private String link;
-    private String status;
+    private ViewStatus status;
 }

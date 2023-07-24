@@ -6,6 +6,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class LanguageUpdDto {
+    private String id;
     private String nameUz;
     private String nameRu;
     private String nameEng;

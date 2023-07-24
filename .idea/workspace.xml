@@ -4,9 +4,76 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac1b02e7-484a-4376-a9b0-5d39816e9d91" name="Changes" comment="added PartnerRepository">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/partner/service/PartnerService.java" afterDir="false" />
+    <list default="true" id="ac1b02e7-484a-4376-a9b0-5d39816e9d91" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/comment/controller/CommentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/comment/dto/CommentReqDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/comment/dto/CommentResDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/comment/entity/CommentEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/comment/repository/CommentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/comment/service/CommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/comment/service/CommentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/contact/controller/ContactController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/contact/dto/ContactReqDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/contact/dto/ContactResDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/contact/dto/ContactUpdDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/contact/entity/ContactEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/contact/repository/ContactRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/contact/service/ContactService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/contact/service/ContactServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/location/controller/LocationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/location/dto/LocationReqDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/location/dto/LocationResDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/location/dto/LocationUpdDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/location/entity/LocationEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/location/repository/LoactionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/location/service/LocationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/location/service/LocationServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/message/controller/MessagesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/message/dto/MessageReqDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/message/dto/MessageResDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/message/entity/MessageEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/message/enums/MessageStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/message/repository/MessageRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/message/service/MessageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/message/service/MessageServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/order/controller/CommentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/order/dto/OrderChangeStatusDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/order/dto/OrderReqDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/order/dto/OrderResDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/order/entity/OrderEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/order/enums/OrderStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/order/repository/OrderRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/order/service/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/order/service/OrderServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/partner/service/PartnerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/services/controller/ServiceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/services/dto/ServiceReqDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/services/dto/ServiceResDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/services/dto/ServiceUpdDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/services/entity/ServiceEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/services/repository/ServiceRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/services/service/ServicesService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/services/service/ServicesServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/social_media/controller/SocialMediaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/social_media/dto/SocialMediaReqDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/social_media/dto/SocialMediaResDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/social_media/dto/SocialMediaUpdDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/social_media/entity/SocialMediaEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/social_media/repository/SocialMediaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/social_media/service/SocialMediaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/social_media/service/SocialMediaServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/component/ChangeStatusDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/component/ChangeStatusDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/language/controller/LanguageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/language/controller/LanguageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/language/dto/LanguageReqDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/language/dto/LanguageReqDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/language/dto/LanguageUpdDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/language/dto/LanguageUpdDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/language/service/LanguageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/language/service/LanguageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/language/service/LanguageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/language/service/LanguageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/partner/controller/PartnerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/partner/controller/PartnerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/partner/dto/PartnerReqDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/partner/dto/PartnerReqDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/partner/dto/PartnerUpdDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/partner/dto/PartnerUpdDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/partner/repository/PartnerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/partner/repository/PartnerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/partner/service/PartnerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/partner/service/PartnerService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +87,7 @@
         <option value="com.haulmont.jpb.JpaEntity" />
         <option value="com.haulmont.jpb.JpaRepository" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -41,40 +109,57 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/itelejproject/translation-service/src/main/java/com/company/config&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;fdc85a02684fd254322a632c5778b8dd&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/itelejproject/translation-service/src/main/java/com/company/message",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "spring.configuration.checksum": "fdc85a02684fd254322a632c5778b8dd",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.company.language.dto" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\itelejproject\translation-service\src\main\java\com\company\config" />
-      <recent name="D:\itelejproject\translation-service\src\main\java\com\company" />
+      <recent name="D:\itelejproject\translation-service\src\main\java\com\company\message" />
+      <recent name="D:\itelejproject\translation-service\src\main\java\com\company\order" />
+      <recent name="D:\itelejproject\translation-service\src\main\java\com\company\comment" />
+      <recent name="D:\itelejproject\translation-service\src\main\java\com\company\location" />
+      <recent name="D:\itelejproject\translation-service\src\main\java\com\company\contact" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.TranslationServiceApplication">
+  <component name="RunManager" selected="JUnit.com.company.social_media.repository in translation-service">
+    <configuration name="com.company.social_media.repository in translation-service" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="translation-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.social_media.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company.social_media.repository" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TranslationServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="translation-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.company.TranslationServiceApplication" />
@@ -93,6 +178,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.com.company.social_media.repository in translation-service" />
         <item itemvalue="Diffblue Cover.Write tests for class TempUserDTO" />
       </list>
     </recent_temporary>
@@ -115,7 +201,7 @@
       <workItem from="1689830835481" duration="8629000" />
       <workItem from="1689925918503" duration="1911000" />
       <workItem from="1689958189238" duration="598000" />
-      <workItem from="1690027123286" duration="3759000" />
+      <workItem from="1690027123286" duration="23416000" />
     </task>
     <task id="LOCAL-00001" summary="added some need thing">
       <created>1689600093173</created>
@@ -320,14 +406,20 @@
       <option name="project" value="LOCAL" />
       <updated>1689927223409</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="added PartnerService">
+      <created>1690110706620</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1690110706620</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changed ROLE_USER to ROLE_PUBLISHER" />
     <MESSAGE value="rewrite UserStatus" />
     <MESSAGE value="rewrite UserDto" />
     <MESSAGE value="deleted TempUserDTO.java" />
@@ -352,6 +444,7 @@
     <MESSAGE value="added PartnerReqDto and write all fields" />
     <MESSAGE value="added PartnerUpdDto and write all fields" />
     <MESSAGE value="added PartnerRepository" />
-    <option name="LAST_COMMIT_MESSAGE" value="added PartnerRepository" />
+    <MESSAGE value="added PartnerService" />
+    <option name="LAST_COMMIT_MESSAGE" value="added PartnerService" />
   </component>
 </project>

@@ -17,9 +17,10 @@ public interface PartnerService {
      */
 
     ResDTO add(PartnerReqDto dto);
-    ResDTO update(String id, PartnerUpdDto dto);
+    ResDTO update(PartnerUpdDto dto);
     ResDTO changeStatus(ChangeStatusDto dto);
     List<PartnerResDto> getAll();
+    ResDTO delete(String id);
 
     /**
      * without security

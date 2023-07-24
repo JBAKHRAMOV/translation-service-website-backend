@@ -5,6 +5,7 @@ import com.company.component.ResDTO;
 import com.company.language.dto.LanguageReqDto;
 import com.company.language.dto.LanguageResDto;
 import com.company.language.dto.LanguageUpdDto;
+import com.company.language.entity.LanguageEntity;
 
 import java.util.List;
 
@@ -14,7 +15,7 @@ public interface LanguageService {
      */
 
     ResDTO add(LanguageReqDto dto);
-    ResDTO update(String id, LanguageUpdDto dto);
+    ResDTO update(LanguageUpdDto dto);
     ResDTO changeStatus(ChangeStatusDto dto);
     List<LanguageResDto> getAll();
 
@@ -23,4 +24,12 @@ public interface LanguageService {
      */
 
     List<LanguageResDto> getAllOnlyPublish();
+
+    /**
+     * COMPONENT
+     */
+
+    LanguageEntity getById(String id);
+
+    LanguageResDto entityToDto(LanguageEntity entity);
 }

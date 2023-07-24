@@ -19,44 +19,43 @@ import java.util.List;
 @AllArgsConstructor
 public class LanguageController {
 
-    @Qualifier(value = "language-service-1")
-    private final LanguageService service;
+        @Qualifier(value = "language-service-1")
+        private final LanguageService service;
 
 
-    @PostMapping("/add")
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public ResponseEntity<ResDTO> add(@RequestBody LanguageReqDto dto) {
-        return ResponseEntity.ok(service.add(dto));
-    }
-    @GetMapping("/all")
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public ResponseEntity<List<LanguageResDto>> getAll() {
-        return ResponseEntity.ok(service.getAll());
-    }
+        @PostMapping("/add")
+        @PreAuthorize("hasRole('ROLE_ADMIN')")
+        public ResponseEntity<ResDTO> add(@RequestBody LanguageReqDto dto) {
+            return ResponseEntity.ok(service.add(dto));
+        }
+        @GetMapping("/all")
+        @PreAuthorize("hasRole('ROLE_ADMIN')")
+        public ResponseEntity<List<LanguageResDto>> getAll() {
+            return ResponseEntity.ok(service.getAll());
+        }
 
-    @PutMapping("/update/{id}")
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public ResponseEntity<ResDTO> update(@PathVariable("id") String id,
-                                         @RequestBody LanguageUpdDto dto) {
-        return ResponseEntity.ok(service.update(id, dto));
-    }
+        @PutMapping("/update")
+        @PreAuthorize("hasRole('ROLE_ADMIN')")
+        public ResponseEntity<ResDTO> update(@RequestBody LanguageUpdDto dto) {
+            return ResponseEntity.ok(service.update(dto));
+        }
 
-    @PutMapping("/change-status")
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public ResponseEntity<ResDTO> changeStatus(@RequestBody ChangeStatusDto dto) {
-        return ResponseEntity.ok(service.changeStatus(dto));
-    }
-
+        @PutMapping("/change-status")
+        @PreAuthorize("hasRole('ROLE_ADMIN')")
+        public ResponseEntity<ResDTO> changeStatus(@RequestBody ChangeStatusDto dto) {
+            return ResponseEntity.ok(service.changeStatus(dto));
+        }
 
 
-    /**
-     * without security
-     */
 
-    @GetMapping("/w-sec/all")
-    public ResponseEntity<List<LanguageResDto>> getAllOnlyPublished() {
-        return ResponseEntity.ok(service.getAllOnlyPublish());
-    }
+        /**
+         * without security
+         */
+
+        @GetMapping("/w-sec/all")
+        public ResponseEntity<List<LanguageResDto>> getAllOnlyPublished() {
+            return ResponseEntity.ok(service.getAllOnlyPublish());
+        }
 
 
 }

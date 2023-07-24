@@ -39,7 +39,7 @@ public class LanguageServiceImpl implements LanguageService {
                         dto.getNameUz(),
                         dto.getNameRu(),
                         dto.getNameEng(),
-                        ViewStatus.valueOf(dto.getStatus())
+                        dto.getStatus()
                 )
         );
 
@@ -47,8 +47,8 @@ public class LanguageServiceImpl implements LanguageService {
     }
 
     @Override
-    public ResDTO update(String id, LanguageUpdDto dto) {
-        LanguageEntity entity=getLanguage(id);
+    public ResDTO update(LanguageUpdDto dto) {
+        LanguageEntity entity= getById(dto.getId());
 
         entity.setNameUz(dto.getNameUz());
         entity.setNameRu(dto.getNameRu());
@@ -62,9 +62,9 @@ public class LanguageServiceImpl implements LanguageService {
     @Override
     public ResDTO changeStatus(ChangeStatusDto dto) {
 
-        LanguageEntity entity=getLanguage(dto.getId());
+        LanguageEntity entity= getById(dto.getId());
 
-        entity.setStatus(ViewStatus.valueOf(dto.getStatus()));
+        entity.setStatus(dto.getStatus());
 
         repository.save(entity);
 
@@ -101,12 +101,15 @@ public class LanguageServiceImpl implements LanguageService {
      * Component
      */
 
-    private LanguageEntity getLanguage(String id) {
+
+    @Override
+    public LanguageEntity getById(String id) {
         return repository.findById(id)
                 .orElseThrow(() -> new ItemNotFoundException("Language not found"));
     }
 
-    private LanguageResDto entityToDto(LanguageEntity entity){
+    @Override
+    public LanguageResDto entityToDto(LanguageEntity entity){
         return new LanguageResDto(
                 entity.getId(),
                 entity.getNameUz(),
