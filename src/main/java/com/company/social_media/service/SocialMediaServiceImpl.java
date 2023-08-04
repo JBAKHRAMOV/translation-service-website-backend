@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Optional;
 
 
-@Service(value = "social-media-service")
+@Service(value = "social-medias-service")
 @AllArgsConstructor
 public class SocialMediaServiceImpl implements SocialMediaService {
 
@@ -28,6 +28,7 @@ public class SocialMediaServiceImpl implements SocialMediaService {
      */
     @Override
     public ResDTO add(SocialMediaReqDto dto) {
+
         Optional<SocialMediaEntity> optional = repository.findByName(dto.getName());
 
         if (optional.isPresent())
@@ -83,7 +84,9 @@ public class SocialMediaServiceImpl implements SocialMediaService {
 
     @Override
     public ResDTO delete(String id) {
+
         repository.delete(getById(id));
+
         return new ResDTO();
     }
 
@@ -109,7 +112,7 @@ public class SocialMediaServiceImpl implements SocialMediaService {
 
     private SocialMediaEntity getById(String id) {
         return repository.findById(id)
-                .orElseThrow(() -> new ItemNotFoundException("Service not found !!!"));
+                .orElseThrow(() -> new ItemNotFoundException("Social media not found !!!"));
     }
 
     private SocialMediaResDto entityToDto(SocialMediaEntity entity) {

@@ -6,6 +6,7 @@ import com.company.location.dto.LocationReqDto;
 import com.company.location.dto.LocationResDto;
 import com.company.location.dto.LocationUpdDto;
 import com.company.location.service.LocationService;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
@@ -18,16 +19,17 @@ import java.util.List;
 @RequestMapping("/api/v1/locations")
 @AllArgsConstructor
 public class LocationController {
-    @Qualifier(value = "location-service")
+    @Qualifier(value = "locations-service")
     private final LocationService service;
 
 
-    @PostMapping("/add")
+    @PostMapping("/")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public ResponseEntity<ResDTO> add(@RequestBody LocationReqDto dto) {
+    public ResponseEntity<ResDTO> add(@RequestBody @Valid LocationReqDto dto) {
         return ResponseEntity.ok(service.add(dto));
     }
-    @GetMapping("/all")
+
+    @GetMapping("/")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ResponseEntity<List<LocationResDto>> getAll() {
         return ResponseEntity.ok(service.getAll());
@@ -35,13 +37,13 @@ public class LocationController {
 
     @PutMapping("/update")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public ResponseEntity<ResDTO> update(@RequestBody LocationUpdDto dto) {
+    public ResponseEntity<ResDTO> update(@RequestBody @Valid LocationUpdDto dto) {
         return ResponseEntity.ok(service.update( dto));
     }
 
     @PutMapping("/change-status")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public ResponseEntity<ResDTO> changeStatus(@RequestBody ChangeStatusDto dto) {
+    public ResponseEntity<ResDTO> changeStatus(@RequestBody @Valid ChangeStatusDto dto) {
         return ResponseEntity.ok(service.changeStatus(dto));
     }
 
@@ -57,7 +59,7 @@ public class LocationController {
      * without security
      */
 
-    @GetMapping("/w-sec/all")
+    @GetMapping("/w-sec/")
     public ResponseEntity<List<LocationResDto>> getAllOnlyPublished() {
         return ResponseEntity.ok(service.getAllOnlyPublish());
     }

@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Optional;
 
 
-@Service(value = "contact-service")
+@Service(value = "contacts-service")
 @AllArgsConstructor
 public class ContactServiceImpl implements ContactService {
 
@@ -28,10 +28,11 @@ public class ContactServiceImpl implements ContactService {
      */
     @Override
     public ResDTO add(ContactReqDto dto) {
+
         Optional<ContactEntity> optional = repository.findByInfo(dto.getInfo());
 
         if (optional.isPresent())
-            throw new ItemAlreadyExistsException("Social media already exists !!!");
+            throw new ItemAlreadyExistsException("Contact already exists !!!");
 
         repository.save(
                 new ContactEntity(
@@ -81,7 +82,9 @@ public class ContactServiceImpl implements ContactService {
 
     @Override
     public ResDTO delete(String id) {
+
         repository.delete(getById(id));
+
         return new ResDTO();
     }
 
@@ -107,8 +110,9 @@ public class ContactServiceImpl implements ContactService {
      */
 
     private ContactEntity getById(String id) {
+
         return repository.findById(id)
-                .orElseThrow(() -> new ItemNotFoundException("Service not found !!!"));
+                .orElseThrow(() -> new ItemNotFoundException("Contact not found !!!"));
     }
 
     private ContactResDto entityToDto(ContactEntity entity) {

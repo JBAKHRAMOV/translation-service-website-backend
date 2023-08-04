@@ -54,6 +54,7 @@ public class OrderServiceImpl implements OrderService {
     public ResDTO changeStatus(OrderChangeStatusDto dto) {
 
         OrderEntity entity = getById(dto.getId());
+
         entity.setStatus(dto.getStatus());
 
         repository.save(entity);
@@ -67,6 +68,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public ResDTO add(OrderReqDto dto) {
+
         ServiceEntity service = servicesService.getById(dto.getServiceId());
         LanguageEntity languageTo = languageService.getById(dto.getLanguageIdTo());
         LanguageEntity languageFrom = languageService.getById(dto.getLanguageIdFrom());
@@ -91,11 +93,13 @@ public class OrderServiceImpl implements OrderService {
      */
 
     private OrderEntity getById(String id) {
+
         return repository.findById(id)
                 .orElseThrow(() -> new ItemNotFoundException("Order not found"));
     }
 
     private OrderResDto entityToDto(OrderEntity entity){
+
         return new OrderResDto(
                 entity.getId(),
                 entity.getFullName(),

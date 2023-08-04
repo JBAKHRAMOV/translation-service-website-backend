@@ -6,6 +6,7 @@ import com.company.services.dto.ServiceReqDto;
 import com.company.services.dto.ServiceResDto;
 import com.company.services.dto.ServiceUpdDto;
 import com.company.services.service.ServicesService;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
@@ -22,12 +23,12 @@ public class ServiceController {
     private final ServicesService service;
 
 
-    @PostMapping("/add")
+    @PostMapping("/")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public ResponseEntity<ResDTO> add(@RequestBody ServiceReqDto dto) {
+    public ResponseEntity<ResDTO> add(@RequestBody @Valid ServiceReqDto dto) {
         return ResponseEntity.ok(service.add(dto));
     }
-    @GetMapping("/all")
+    @GetMapping("/")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ResponseEntity<List<ServiceResDto>> getAll() {
         return ResponseEntity.ok(service.getAll());
@@ -35,13 +36,13 @@ public class ServiceController {
 
     @PutMapping("/update")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public ResponseEntity<ResDTO> update(@RequestBody ServiceUpdDto dto) {
+    public ResponseEntity<ResDTO> update(@RequestBody @Valid ServiceUpdDto dto) {
         return ResponseEntity.ok(service.update( dto));
     }
 
     @PutMapping("/change-status")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public ResponseEntity<ResDTO> changeStatus(@RequestBody ChangeStatusDto dto) {
+    public ResponseEntity<ResDTO> changeStatus(@RequestBody @Valid ChangeStatusDto dto) {
         return ResponseEntity.ok(service.changeStatus(dto));
     }
 
@@ -51,7 +52,7 @@ public class ServiceController {
      * without security
      */
 
-    @GetMapping("/w-sec/all")
+    @GetMapping("/w-sec/")
     public ResponseEntity<List<ServiceResDto>> getAllOnlyPublished() {
         return ResponseEntity.ok(service.getAllOnlyPublish());
     }

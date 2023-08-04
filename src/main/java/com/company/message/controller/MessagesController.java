@@ -5,6 +5,7 @@ import com.company.message.dto.MessageReqDto;
 import com.company.message.dto.MessageResDto;
 import com.company.message.enums.MessageStatus;
 import com.company.message.service.MessageService;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
@@ -23,19 +24,19 @@ public class MessagesController {
 
 
 
-        @GetMapping("/all")
+        @GetMapping("/")
         @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_PUBLISHER')")
         public ResponseEntity<List<MessageResDto>> getAll() {
             return ResponseEntity.ok(service.getAll());
         }
 
-        @GetMapping("/all/{status}")
+        @GetMapping("/{status}")
         @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_PUBLISHER')")
         public ResponseEntity<List<MessageResDto>> getAllByStatus(@PathVariable(value = "status") MessageStatus status) {
                 return ResponseEntity.ok(service.getAllByStatus(status));
         }
 
-        @PutMapping("/change-status/{id}")
+        @PutMapping("/{id}")
         @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_PUBLISHER')")
         public ResponseEntity<ResDTO> changeStatus(@PathVariable(value = "id") String id) {
             return ResponseEntity.ok(service.changeStatus(id));
@@ -55,7 +56,7 @@ public class MessagesController {
 
         @PostMapping("/w-sec/")
         @PreAuthorize("hasRole('ROLE_ADMIN')")
-        public ResponseEntity<ResDTO> add(@RequestBody MessageReqDto dto) {
+        public ResponseEntity<ResDTO> add(@RequestBody @Valid MessageReqDto dto) {
                 return ResponseEntity.ok(service.add(dto));
         }
 

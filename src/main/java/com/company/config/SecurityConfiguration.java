@@ -17,6 +17,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.CorsConfigurationSource;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
@@ -31,12 +33,14 @@ public class SecurityConfiguration {
             "/v3/api-docs",
             "/configuration/ui",
             "/configuration/security",
+
             "/swagger-ui.html",
             "/swagger-ui/index.html",
+            "/swagger-ui/**",
+
             "/api/v1/language/w-sec/**",
             "/webjars/**",
             "/v3/api-docs/**",
-            "/swagger-ui/**",
             "/swagger-resources",
             "/swagger-resources/**",
             "/api/v1/auth/**"
@@ -86,6 +90,18 @@ public class SecurityConfiguration {
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
         return config.getAuthenticationManager();
+    }
+
+    @Bean
+    public CorsConfigurationSource corsConfigurationSource() {
+        CorsConfiguration configuration = new CorsConfiguration();
+        configuration.addAllowedOrigin("*"); // Allow requests from any origin
+        configuration.addAllowedMethod("*"); // Allow all HTTP methods (GET, POST, PUT, etc.)
+        configuration.addAllowedHeader("*"); // Allow all headers
+
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**", configuration);
+        return source;
     }
 
 }

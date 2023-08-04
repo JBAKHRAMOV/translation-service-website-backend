@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Optional;
 
 
-@Service(value = "location-service")
+@Service(value = "locations-service")
 @AllArgsConstructor
 public class LocationServiceImpl implements LocationService {
 
@@ -28,6 +28,7 @@ public class LocationServiceImpl implements LocationService {
      */
     @Override
     public ResDTO add(LocationReqDto dto) {
+
         Optional<LocationEntity> optional = repository.findByName(dto.getName());
 
         if (optional.isPresent())
@@ -42,6 +43,7 @@ public class LocationServiceImpl implements LocationService {
         );
 
         return new ResDTO();
+
     }
 
     @Override
@@ -55,6 +57,7 @@ public class LocationServiceImpl implements LocationService {
         repository.save(entity);
 
         return new ResDTO();
+
     }
 
     @Override
@@ -67,6 +70,7 @@ public class LocationServiceImpl implements LocationService {
         repository.save(entity);
 
         return new ResDTO();
+
     }
 
     @Override
@@ -81,8 +85,11 @@ public class LocationServiceImpl implements LocationService {
 
     @Override
     public ResDTO delete(String id) {
+
         repository.delete(getById(id));
+
         return new ResDTO();
+
     }
 
 
@@ -106,11 +113,14 @@ public class LocationServiceImpl implements LocationService {
      */
 
     private LocationEntity getById(String id) {
+
         return repository.findById(id)
-                .orElseThrow(() -> new ItemNotFoundException("Service not found !!!"));
+                .orElseThrow(() -> new ItemNotFoundException("Location not found !!!"));
+
     }
 
     private LocationResDto entityToDto(LocationEntity entity) {
+
         return new LocationResDto(
                 entity.getId(),
                 entity.getName(),
@@ -118,5 +128,6 @@ public class LocationServiceImpl implements LocationService {
                 entity.getStatus(),
                 entity.getCreatedDate()
         );
+
     }
 }

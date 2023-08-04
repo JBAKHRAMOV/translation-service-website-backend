@@ -6,6 +6,7 @@ import com.company.social_media.dto.SocialMediaReqDto;
 import com.company.social_media.dto.SocialMediaResDto;
 import com.company.social_media.dto.SocialMediaUpdDto;
 import com.company.social_media.service.SocialMediaService;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
@@ -15,19 +16,19 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/social-media")
+@RequestMapping("/api/v1/social-medias")
 @AllArgsConstructor
 public class SocialMediaController {
-    @Qualifier(value = "social-media-service")
+    @Qualifier(value = "social-medias-service")
     private final SocialMediaService service;
 
 
-    @PostMapping("/add")
+    @PostMapping("/")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public ResponseEntity<ResDTO> add(@RequestBody SocialMediaReqDto dto) {
+    public ResponseEntity<ResDTO> add(@RequestBody @Valid SocialMediaReqDto dto) {
         return ResponseEntity.ok(service.add(dto));
     }
-    @GetMapping("/all")
+    @GetMapping("/")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ResponseEntity<List<SocialMediaResDto>> getAll() {
         return ResponseEntity.ok(service.getAll());
@@ -35,13 +36,13 @@ public class SocialMediaController {
 
     @PutMapping("/update")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public ResponseEntity<ResDTO> update(@RequestBody SocialMediaUpdDto dto) {
+    public ResponseEntity<ResDTO> update(@RequestBody @Valid SocialMediaUpdDto dto) {
         return ResponseEntity.ok(service.update( dto));
     }
 
     @PutMapping("/change-status")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public ResponseEntity<ResDTO> changeStatus(@RequestBody ChangeStatusDto dto) {
+    public ResponseEntity<ResDTO> changeStatus(@RequestBody @Valid ChangeStatusDto dto) {
         return ResponseEntity.ok(service.changeStatus(dto));
     }
 
@@ -57,7 +58,7 @@ public class SocialMediaController {
      * without security
      */
 
-    @GetMapping("/w-sec/all")
+    @GetMapping("/w-sec/")
     public ResponseEntity<List<SocialMediaResDto>> getAllOnlyPublished() {
         return ResponseEntity.ok(service.getAllOnlyPublish());
     }

@@ -16,7 +16,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service("partner-service")
+@Service("partners-service")
 @AllArgsConstructor
 public class PartnerServiceImpl implements PartnerService {
 
@@ -79,7 +79,9 @@ public class PartnerServiceImpl implements PartnerService {
 
     @Override
     public ResDTO delete(String id) {
+
         repository.delete(getById(id));
+
         return new ResDTO();
     }
 
@@ -114,6 +116,6 @@ public class PartnerServiceImpl implements PartnerService {
 
     private PartnerEntity getById(String id) {
         return repository.findById(id)
-                .orElseThrow(() -> new ItemNotFoundException("Item not found"));
+                .orElseThrow(() -> new ItemNotFoundException("Partner not found"));
     }
 }

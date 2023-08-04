@@ -6,6 +6,7 @@ import com.company.contact.dto.ContactReqDto;
 import com.company.contact.dto.ContactResDto;
 import com.company.contact.dto.ContactUpdDto;
 import com.company.contact.service.ContactService;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
@@ -18,16 +19,16 @@ import java.util.List;
 @RequestMapping("/api/v1/contacts")
 @AllArgsConstructor
 public class ContactController {
-    @Qualifier(value = "contact-service")
+    @Qualifier(value = "contacts-service")
     private final ContactService service;
 
 
-    @PostMapping("/add")
+    @PostMapping("/")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public ResponseEntity<ResDTO> add(@RequestBody ContactReqDto dto) {
+    public ResponseEntity<ResDTO> add(@RequestBody @Valid ContactReqDto dto) {
         return ResponseEntity.ok(service.add(dto));
     }
-    @GetMapping("/all")
+    @GetMapping("/")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ResponseEntity<List<ContactResDto>> getAll() {
         return ResponseEntity.ok(service.getAll());
@@ -35,13 +36,13 @@ public class ContactController {
 
     @PutMapping("/update")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public ResponseEntity<ResDTO> update(@RequestBody ContactUpdDto dto) {
+    public ResponseEntity<ResDTO> update(@RequestBody @Valid ContactUpdDto dto) {
         return ResponseEntity.ok(service.update( dto));
     }
 
     @PutMapping("/change-status")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public ResponseEntity<ResDTO> changeStatus(@RequestBody ChangeStatusDto dto) {
+    public ResponseEntity<ResDTO> changeStatus(@RequestBody @Valid ChangeStatusDto dto) {
         return ResponseEntity.ok(service.changeStatus(dto));
     }
 
@@ -57,7 +58,7 @@ public class ContactController {
      * without security
      */
 
-    @GetMapping("/w-sec/all")
+    @GetMapping("/w-sec/")
     public ResponseEntity<List<ContactResDto>> getAllOnlyPublished() {
         return ResponseEntity.ok(service.getAllOnlyPublish());
     }

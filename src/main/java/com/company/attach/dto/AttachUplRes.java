@@ -6,6 +6,7 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public class AttachUplRes {
+
     private String id;
     private String path;
 }

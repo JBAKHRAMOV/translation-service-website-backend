@@ -16,7 +16,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service(value = "language-service-1")
+@Service(value = "languages-service")
 @AllArgsConstructor
 public class LanguageServiceImpl implements LanguageService {
 
@@ -44,10 +44,12 @@ public class LanguageServiceImpl implements LanguageService {
         );
 
         return new ResDTO();
+
     }
 
     @Override
     public ResDTO update(LanguageUpdDto dto) {
+
         LanguageEntity entity= getById(dto.getId());
 
         entity.setNameUz(dto.getNameUz());
@@ -57,6 +59,7 @@ public class LanguageServiceImpl implements LanguageService {
         repository.save(entity);
 
         return new ResDTO();
+
     }
 
     @Override
@@ -69,6 +72,7 @@ public class LanguageServiceImpl implements LanguageService {
         repository.save(entity);
 
         return new ResDTO();
+
     }
 
     @Override
@@ -104,12 +108,15 @@ public class LanguageServiceImpl implements LanguageService {
 
     @Override
     public LanguageEntity getById(String id) {
+
         return repository.findById(id)
                 .orElseThrow(() -> new ItemNotFoundException("Language not found"));
+
     }
 
     @Override
     public LanguageResDto entityToDto(LanguageEntity entity){
+
         return new LanguageResDto(
                 entity.getId(),
                 entity.getNameUz(),
@@ -118,5 +125,6 @@ public class LanguageServiceImpl implements LanguageService {
                 entity.getStatus(),
                 entity.getCreatedDate()
         );
+
     }
 }

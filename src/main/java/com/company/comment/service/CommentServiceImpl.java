@@ -7,15 +7,18 @@ import com.company.comment.repository.CommentRepository;
 import com.company.component.ChangeStatusDto;
 import com.company.component.ResDTO;
 import com.company.component.ViewStatus;
+import com.company.config.details.EntityDetails;
 import com.company.exp.ItemNotFoundException;
 import com.company.services.entity.ServiceEntity;
 import com.company.services.service.ServicesService;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Slf4j
 @Service(value = "comments-service")
 @AllArgsConstructor
 public class CommentServiceImpl implements CommentService {
@@ -52,7 +55,11 @@ public class CommentServiceImpl implements CommentService {
 
     @Override
     public ResDTO delete(String id){
+
         repository.delete(getById(id));
+
+        log.info("Comment delete with id: {}  by {} : ", id, EntityDetails.getProfile().getPhoneNum());
+
         return new ResDTO();
     }
 

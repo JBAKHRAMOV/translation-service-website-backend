@@ -5,6 +5,7 @@ import com.company.comment.dto.CommentResDto;
 import com.company.comment.service.CommentService;
 import com.company.component.ChangeStatusDto;
 import com.company.component.ResDTO;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
@@ -23,15 +24,15 @@ public class CommentController {
 
 
 
-        @GetMapping("/all")
+        @GetMapping("/")
         @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_PUBLISHER')")
         public ResponseEntity<List<CommentResDto>> getAll() {
             return ResponseEntity.ok(service.getAll());
         }
 
-        @PutMapping("/change-status")
+        @PutMapping("/")
         @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_PUBLISHER')")
-        public ResponseEntity<ResDTO> changeStatus(@RequestBody ChangeStatusDto dto) {
+        public ResponseEntity<ResDTO> changeStatus(@RequestBody @Valid ChangeStatusDto dto) {
             return ResponseEntity.ok(service.changeStatus(dto));
         }
 
@@ -49,11 +50,11 @@ public class CommentController {
 
         @PostMapping("/w-sec/")
         @PreAuthorize("hasRole('ROLE_ADMIN')")
-        public ResponseEntity<ResDTO> add(@RequestBody CommentReqDto dto) {
+        public ResponseEntity<ResDTO> add(@RequestBody @Valid CommentReqDto dto) {
                 return ResponseEntity.ok(service.add(dto));
         }
 
-        @GetMapping("/w-sec/all")
+        @GetMapping("/w-sec/")
         public ResponseEntity<List<CommentResDto>> getAllOnlyPublished() {
             return ResponseEntity.ok(service.getAllOnlyPublish());
         }

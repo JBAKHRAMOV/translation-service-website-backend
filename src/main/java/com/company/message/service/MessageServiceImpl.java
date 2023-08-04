@@ -19,8 +19,6 @@ import java.util.List;
 public class MessageServiceImpl implements MessageService {
 
     private final MessageRepository repository;
-    @Qualifier(value = "services-service")
-    private final ServicesService servicesService;
 
     /**
      * ADMIN
@@ -49,21 +47,24 @@ public class MessageServiceImpl implements MessageService {
     @Override
     public ResDTO changeStatus(String id) {
 
-        MessageEntity entity= getById(id);
+        MessageEntity entity = getById(id);
 
         entity.setStatus(MessageStatus.READ);
 
         repository.save(entity);
 
         return new ResDTO();
+
     }
 
 
-
     @Override
-    public ResDTO delete(String id){
+    public ResDTO delete(String id) {
+
         repository.delete(getById(id));
+
         return new ResDTO();
+
     }
 
 
@@ -74,7 +75,7 @@ public class MessageServiceImpl implements MessageService {
     @Override
     public ResDTO add(MessageReqDto dto) {
 
-        MessageEntity entity=new MessageEntity();
+        MessageEntity entity = new MessageEntity();
         entity.setFullName(entity.getFullName());
         entity.setPhoneNum(dto.getPhoneNum());
         entity.setEmail(dto.getEmail());
@@ -84,6 +85,7 @@ public class MessageServiceImpl implements MessageService {
         repository.save(entity);
 
         return new ResDTO();
+
     }
 
     /**
@@ -91,12 +93,15 @@ public class MessageServiceImpl implements MessageService {
      */
 
     private MessageEntity getById(String id) {
+
         return repository.findById(id)
                 .orElseThrow(() -> new ItemNotFoundException("Message not found"));
+
     }
 
-    private MessageResDto entityToDto(MessageEntity entity){
-        return new MessageResDto(
+    private MessageResDto entityToDto(MessageEntity entity) {
+
+        return MessageResDto.build(
                 entity.getId(),
                 entity.getFullName(),
                 entity.getPhoneNum(),
@@ -105,5 +110,6 @@ public class MessageServiceImpl implements MessageService {
                 entity.getStatus(),
                 entity.getCreatedDate()
         );
+
     }
 }

@@ -6,6 +6,7 @@ import com.company.order.dto.OrderReqDto;
 import com.company.order.dto.OrderResDto;
 import com.company.order.enums.OrderStatus;
 import com.company.order.service.OrderService;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
@@ -17,20 +18,20 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1/orders")
 @AllArgsConstructor
-public class CommentController {
+public class OrderController {
 
         @Qualifier(value = "orders-service")
         private final OrderService service;
 
 
 
-        @GetMapping("/all")
+        @GetMapping("/")
         @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_PUBLISHER')")
         public ResponseEntity<List<OrderResDto>> getAll() {
             return ResponseEntity.ok(service.getAll());
         }
 
-        @GetMapping("/all/{status}")
+        @GetMapping("/{status}")
         @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_PUBLISHER')")
         public ResponseEntity<List<OrderResDto>> getAllByStatus(@PathVariable(value = "status") OrderStatus status) {
                 return ResponseEntity.ok(service.getAllByStatus(status));
@@ -38,7 +39,7 @@ public class CommentController {
 
         @PutMapping("/change-status")
         @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_PUBLISHER')")
-        public ResponseEntity<ResDTO> changeStatus(@RequestBody OrderChangeStatusDto dto) {
+        public ResponseEntity<ResDTO> changeStatus(@RequestBody @Valid OrderChangeStatusDto dto) {
             return ResponseEntity.ok(service.changeStatus(dto));
         }
 
@@ -48,7 +49,7 @@ public class CommentController {
 
         @PostMapping("/w-sec/")
         @PreAuthorize("hasRole('ROLE_ADMIN')")
-        public ResponseEntity<ResDTO> add(@RequestBody OrderReqDto dto) {
+        public ResponseEntity<ResDTO> add(@RequestBody @Valid OrderReqDto dto) {
                 return ResponseEntity.ok(service.add(dto));
         }
 

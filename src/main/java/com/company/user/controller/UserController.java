@@ -5,6 +5,7 @@ import com.company.config.details.EntityDetails;
 import com.company.user.dto.UserDto;
 import com.company.user.dto.UserUpdDTO;
 import com.company.user.service.UserService;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
@@ -14,28 +15,28 @@ import org.springframework.web.multipart.MultipartFile;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping("/api/v1/user")
+@RequestMapping("/api/v1/users")
 public class UserController {
-    @Qualifier(value = "user-service")
+    @Qualifier(value = "users-service")
     private final UserService userService;
 
     /**
      * ADMIN
      */
 
-    @PostMapping("/add")
+    @PostMapping("/")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public ResponseEntity<?> addUser(@RequestBody UserDto dto){
+    public ResponseEntity<?> addUser(@RequestBody @Valid UserDto dto){
         return ResponseEntity.ok(userService.addUser(dto));
     }
 
-    @GetMapping("/by-id/{id}")
+    @GetMapping("/{id}")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ResponseEntity<?> getByIdForAdmin(@PathVariable("id")String id){
         return ResponseEntity.ok(userService.getById(id));
     }
 
-    @GetMapping("/users")
+    @GetMapping("/all")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ResponseEntity<?> getAll(){
         return ResponseEntity.ok(userService.getAll());
@@ -68,7 +69,7 @@ public class UserController {
 
     @PutMapping("/{id}")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public ResponseEntity<?> updateByIdForAdmin(@RequestBody UserUpdDTO userUpdDTO, @PathVariable String id){
+    public ResponseEntity<?> updateByIdForAdmin(@RequestBody @Valid UserUpdDTO userUpdDTO, @PathVariable String id){
         return ResponseEntity.ok(userService.update(id, userUpdDTO));
     }
 
@@ -82,7 +83,7 @@ public class UserController {
         return ResponseEntity.ok(userService.getById(EntityDetails.getProfile().getId()));
     }
 
-    @PutMapping("")
+    @PutMapping("/")
     @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_PUBLISHER')")
     public ResponseEntity<?> updateByIdForPublisher(@RequestBody UserUpdDTO userUpdDTO){
         return ResponseEntity.ok(userService.update(EntityDetails.getProfile().getId(), userUpdDTO));

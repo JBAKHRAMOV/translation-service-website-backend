@@ -5,16 +5,14 @@ import com.company.user.enums.UserRole;
 import com.company.user.enums.UserStatus;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDate;
 
 @Getter
 @Setter
 @Entity
+@ToString
 @AllArgsConstructor
 @NoArgsConstructor
 @Table

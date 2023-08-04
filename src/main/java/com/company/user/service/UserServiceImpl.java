@@ -2,7 +2,6 @@ package com.company.user.service;
 
 import com.company.attach.service.AttachService;
 import com.company.component.ResDTO;
-import com.company.component.UserComponent;
 import com.company.config.details.EntityDetails;
 import com.company.exp.ItemAlreadyExistsException;
 import com.company.exp.ItemNotFoundException;
@@ -21,7 +20,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.util.List;
 import java.util.Optional;
 
-@Service("user-service")
+@Service("users-service")
 @AllArgsConstructor
 public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
@@ -34,7 +33,6 @@ public class UserServiceImpl implements UserService {
      */
 
     public ResDTO addUser(UserDto dto) {
-        UserComponent.checkPhoneNum(dto.getPhoneNum());
         Optional<UserEntity> optional = userRepository.findByPhoneNum(dto.getPhoneNum());
         if (optional.isPresent()) {
             throw new ItemAlreadyExistsException("User already exists with this phone number");
@@ -103,8 +101,6 @@ public class UserServiceImpl implements UserService {
     public ResDTO update( String id, UserUpdDTO dto) {
 
         UserEntity entity = getUser(id);
-
-        UserComponent.checkPhoneNum(dto.getPhoneNum());
 
         if (!entity.getPhoneNum().equals(dto.getPhoneNum()))
             if (userRepository.findByPhoneNum(dto.getPhoneNum()).isPresent())
