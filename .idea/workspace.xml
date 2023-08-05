@@ -5,58 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac1b02e7-484a-4376-a9b0-5d39816e9d91" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/config/openApi/SwaggerConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/attach/dto/AttachUplRes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/attach/dto/AttachUplRes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/auth/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/auth/controller/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/auth/dto/AuthenticationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/auth/dto/AuthenticationRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/auth/dto/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/auth/dto/RegisterRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/auth/service/AuthenticationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/auth/service/AuthenticationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/comment/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/comment/controller/CommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/comment/dto/CommentReqDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/comment/dto/CommentReqDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/comment/service/CommentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/comment/service/CommentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/component/ChangeStatusDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/component/ChangeStatusDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/component/UserComponent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/config/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/contact/controller/ContactController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/contact/controller/ContactController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/contact/dto/ContactReqDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/contact/dto/ContactReqDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/contact/dto/ContactUpdDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/contact/dto/ContactUpdDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/contact/service/ContactServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/contact/service/ContactServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/language/controller/LanguageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/language/controller/LanguageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/language/dto/LanguageReqDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/language/dto/LanguageReqDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/language/dto/LanguageUpdDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/language/dto/LanguageUpdDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/language/service/LanguageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/language/service/LanguageServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/location/controller/LocationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/location/controller/LocationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/location/dto/LocationReqDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/location/dto/LocationReqDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/location/dto/LocationUpdDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/location/dto/LocationUpdDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/location/service/LocationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/location/service/LocationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/message/controller/MessagesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/message/controller/MessagesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/message/dto/MessageReqDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/message/dto/MessageReqDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/message/dto/MessageResDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/message/dto/MessageResDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/message/service/MessageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/message/service/MessageServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/order/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/order/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/order/dto/OrderChangeStatusDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/order/dto/OrderChangeStatusDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/order/dto/OrderReqDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/order/dto/OrderReqDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/order/service/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/order/service/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/partner/controller/PartnerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/partner/controller/PartnerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/partner/dto/PartnerReqDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/partner/dto/PartnerReqDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/partner/dto/PartnerUpdDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/partner/dto/PartnerUpdDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/partner/service/PartnerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/partner/service/PartnerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/services/controller/ServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/services/controller/ServiceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/services/dto/ServiceReqDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/services/dto/ServiceReqDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/services/dto/ServiceUpdDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/services/dto/ServiceUpdDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/services/service/ServicesServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/services/service/ServicesServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/social_media/controller/SocialMediaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/social_media/controller/SocialMediaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/social_media/dto/SocialMediaReqDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/social_media/dto/SocialMediaReqDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/social_media/dto/SocialMediaUpdDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/social_media/dto/SocialMediaUpdDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/social_media/service/SocialMediaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/social_media/service/SocialMediaServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/user/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/user/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/user/dto/UserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/user/dto/UserUpdDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/user/dto/UserUpdDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/user/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/user/entity/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/user/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/user/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,6 +145,7 @@
       <workItem from="1690989713298" duration="900000" />
       <workItem from="1691048590570" duration="466000" />
       <workItem from="1691053195227" duration="711000" />
+      <workItem from="1691173140028" duration="1710000" />
     </task>
     <task id="LOCAL-00001" summary="added some need thing">
       <created>1689600093173</created>
@@ -414,7 +364,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690188495614</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="finished all project but will check all api and fix some methods">
+      <created>1691173269061</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1691173269061</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
