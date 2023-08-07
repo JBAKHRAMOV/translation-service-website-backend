@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ac1b02e7-484a-4376-a9b0-5d39816e9d91" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/startup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/startup.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,6 +147,10 @@
       <workItem from="1691048590570" duration="466000" />
       <workItem from="1691053195227" duration="711000" />
       <workItem from="1691173140028" duration="1710000" />
+      <workItem from="1691236668069" duration="1277000" />
+      <workItem from="1691239811220" duration="2937000" />
+      <workItem from="1691315880961" duration="637000" />
+      <workItem from="1691398913789" duration="1824000" />
     </task>
     <task id="LOCAL-00001" summary="added some need thing">
       <created>1689600093173</created>
@@ -371,14 +376,20 @@
       <option name="project" value="LOCAL" />
       <updated>1691173269061</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="add file for control">
+      <created>1691236929280</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1691236929281</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="deleted TempUserDTO.java" />
     <MESSAGE value="rewrite UserResDTO.java" />
     <MESSAGE value="added field role to UserUpdDTO" />
     <MESSAGE value="changed some method of UserService" />
@@ -403,6 +414,7 @@
     <MESSAGE value="added PartnerService" />
     <MESSAGE value="    added PartnerService" />
     <MESSAGE value="finished all project but will check all api and fix some methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished all project but will check all api and fix some methods" />
+    <MESSAGE value="add file for control" />
+    <option name="LAST_COMMIT_MESSAGE" value="add file for control" />
   </component>
 </project>
