@@ -55,7 +55,6 @@ public class MessagesController {
          */
 
         @PostMapping("/w-sec/")
-        @PreAuthorize("hasRole('ROLE_ADMIN')")
         public ResponseEntity<ResDTO> add(@RequestBody @Valid MessageReqDto dto) {
                 return ResponseEntity.ok(service.add(dto));
         }

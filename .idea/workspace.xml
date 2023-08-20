@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac1b02e7-484a-4376-a9b0-5d39816e9d91" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/startup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/startup.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/comment/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/comment/controller/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/message/controller/MessagesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/message/controller/MessagesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/order/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/order/controller/OrderController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +39,10 @@
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="ProjectErrors" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2SfOwdTRksdiyciSjfQWA25uezi" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -151,6 +158,15 @@
       <workItem from="1691239811220" duration="2937000" />
       <workItem from="1691315880961" duration="637000" />
       <workItem from="1691398913789" duration="1824000" />
+      <workItem from="1691442479714" duration="1421000" />
+      <workItem from="1691773729984" duration="659000" />
+      <workItem from="1692104394628" duration="756000" />
+      <workItem from="1692109614767" duration="20000" />
+      <workItem from="1692421422540" duration="645000" />
+      <workItem from="1692442684946" duration="187000" />
+      <workItem from="1692450516504" duration="29000" />
+      <workItem from="1692478914432" duration="89000" />
+      <workItem from="1692505995961" duration="1186000" />
     </task>
     <task id="LOCAL-00001" summary="added some need thing">
       <created>1689600093173</created>
@@ -383,14 +399,27 @@
       <option name="project" value="LOCAL" />
       <updated>1691236929281</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="open security for some api">
+      <created>1691442717270</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1691442717270</updated>
+    </task>
+    <task id="LOCAL-00035" summary="open security for some api">
+      <created>1691442954598</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1691442954598</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="rewrite UserResDTO.java" />
     <MESSAGE value="added field role to UserUpdDTO" />
     <MESSAGE value="changed some method of UserService" />
     <MESSAGE value="changed some method of package user" />
@@ -415,6 +444,7 @@
     <MESSAGE value="    added PartnerService" />
     <MESSAGE value="finished all project but will check all api and fix some methods" />
     <MESSAGE value="add file for control" />
-    <option name="LAST_COMMIT_MESSAGE" value="add file for control" />
+    <MESSAGE value="open security for some api" />
+    <option name="LAST_COMMIT_MESSAGE" value="open security for some api" />
   </component>
 </project>

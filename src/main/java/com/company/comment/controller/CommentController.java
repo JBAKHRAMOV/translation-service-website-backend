@@ -49,7 +49,6 @@ public class CommentController {
          */
 
         @PostMapping("/w-sec/")
-        @PreAuthorize("hasRole('ROLE_ADMIN')")
         public ResponseEntity<ResDTO> add(@RequestBody @Valid CommentReqDto dto) {
                 return ResponseEntity.ok(service.add(dto));
         }

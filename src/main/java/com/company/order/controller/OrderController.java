@@ -48,7 +48,6 @@ public class OrderController {
          */
 
         @PostMapping("/w-sec/")
-        @PreAuthorize("hasRole('ROLE_ADMIN')")
         public ResponseEntity<ResDTO> add(@RequestBody @Valid OrderReqDto dto) {
                 return ResponseEntity.ok(service.add(dto));
         }
